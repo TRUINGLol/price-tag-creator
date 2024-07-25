@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.header{
+    width: 45%;
+    display: flex;
+    float: right;
+    background-color: white;
+    height: 56px;
+    font-family: "Noto Sans", sans-serif;
+    gap: 30px;
+    justify-content: right;
+}
+
+.ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 14px;
+}
+
+.ul>li>a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.ul>li:not(:last-child){
+    margin-right: 15px;
+}
+
+.Auth{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+.Auth>a{
+    margin-top: 13px;
+    height: 26px;
+    text-decoration: none;
+    color: black;
+}
+.Auth>a:not(:last-child){
+    border-right: 2px solid black;
+    margin-right: 5px;
+}
+.Auth>a:first-child{
+    width: 54px;
+}
