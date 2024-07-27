@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.button{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+.button>a{
+    padding-top: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
