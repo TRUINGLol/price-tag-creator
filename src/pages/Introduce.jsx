@@ -22,7 +22,7 @@ export default function Introduce(){
                 </div>
                 <div className={cl.button}>
                     <Button>Инструкция</Button>
-                    <Button bgc="#ED8347" borderSet="2px solid #ED8347" color="white">Создать ценник</Button>
+                    <Button href="/select1" bgc="#ED8347" borderSet="2px solid #ED8347" color="white">Создать ценник</Button>
                 </div>
             </div>
         </div>
