@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8/o0HtRVzcSNKvxyBjAfWxd+qvOBbOjvBb6t8vHwq+U=",
+  "Source": "tagBackendAPI",
+  "BasePath": "_content/tagBackendAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

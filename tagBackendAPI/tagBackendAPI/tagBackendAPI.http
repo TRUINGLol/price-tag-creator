@@ -1,0 +1,6 @@
+@tagBackendAPI_HostAddress = http://localhost:5014
+
+GET {{tagBackendAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
