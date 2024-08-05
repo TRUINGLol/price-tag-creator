@@ -11,3 +11,7 @@
 
 [React Router Dom](https://github.com/remix-run/react-router) - для работы с навигацией на сайте
 
+[ASP.NET](https://github.com/dotnet/aspnetcore) - для работы с серверной частью сайта
+
+[Axios](https://github.com/axios/axios) - для работы с HTTP запросами
+
