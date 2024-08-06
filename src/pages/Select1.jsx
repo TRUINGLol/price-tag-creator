@@ -39,7 +39,7 @@ export default function Select1(){
             </div>
 
             <div className={cl.tags}>
-                {isLoading ? <Loader/> : data.map((tag)=><TagTemplate key={tag.id} tag={tag.tag}/>)}
+                {isLoading ? <div style={{display:"flex", justifyContent:'center'}}><Loader/></div>: data.map((tag)=><TagTemplate key={tag.id} tag={tag.tag}/>)}
             </div>
 
             <div className={cl.button}>
