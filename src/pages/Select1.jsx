@@ -10,8 +10,15 @@ export default function Select1(){
 
     async function fetchTags(setData,setIsLoading){
         setIsLoading(true);
-        const responce = await axios.get("https://localhost:7056/api/tag?count=3");
-        setData(responce.data);
+        try{
+            const responce = await axios.get("https://localhost:7056/api/tag?count=3");
+            setData(responce.data);
+        }
+        catch(e){
+            setIsLoading(true);
+            console.error("Fetch error:", e.message)
+        }
+        
         setIsLoading(false);
     }
 
