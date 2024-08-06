@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import cl from "./styles/Select1.module.css";
 import Header from "../components/header/Header.jsx";
 import TagTemplate from "../components/tagTemplate/TagTemplate.jsx";
 import Button from "../components/button/Button.jsx";
+import axios from "axios";
+import Loader from "../components/loader/Loader.jsx";
 
 export default function Select1(){
+
+    async function fetchTags(setData,setIsLoading){
+        setIsLoading(true);
+        const responce = await axios.get("https://localhost:7056/api/tag?count=3");
+        setData(responce.data);
+        setIsLoading(false);
+    }
+
+    const [isLoading, setIsLoading] = useState(false);
+    
+    const [data,setData] = useState([]);
+
+    useEffect(()=>{
+        fetchTags(setData,setIsLoading);
+    },[])
+
     return (
         <div className={cl.select}>
             <Header/>
@@ -14,13 +32,11 @@ export default function Select1(){
             </div>
 
             <div className={cl.tags}>
-                <TagTemplate/>
-                <TagTemplate/>
-                <TagTemplate/>
+                {isLoading ? <Loader/> : data.map((tag)=><TagTemplate key={tag.id} tag={tag.tag}/>)}
             </div>
 
             <div className={cl.button}>
-                <Button width='200px' bgc="#ED8347" borderSet="2px solid #ED8347" color="white">Увидеть больше</Button>
+                <Button href="/moreTags" width='200px' bgc="#ED8347" borderSet="2px solid #ED8347" color="white">Увидеть больше</Button>
             </div>
         </div>
     );

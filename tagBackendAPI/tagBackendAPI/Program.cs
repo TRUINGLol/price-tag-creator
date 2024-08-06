@@ -24,20 +24,33 @@ app.MapGet("api/tags", () =>
     return Results.Json(tags);
 });
 
-//Get tag by
-app.MapGet("api/tag/{count}", (string count) =>
+//Get tag by count
+app.MapGet("api/tag", (string count) =>
 {
     List<TagsHtml> tags = new List<TagsHtml>();
     using(AplicationContext db = new AplicationContext())
     {
-        var tagsDB = db.tagsHtml.Where(d=>d.id<=Int32.Parse(count)).ToList();
-
-        foreach (TagsHtml item in tagsDB)
+        if (string.IsNullOrWhiteSpace(count))
         {
-            tags.Add(item);
+            return Results.Content("query is null or white space");
+        }
+
+        try
+        {
+            var tagsDB = db.tagsHtml.Where(d => d.id <= Int32.Parse(count)).ToList();
+
+            foreach (TagsHtml item in tagsDB)
+            {
+                tags.Add(item);
+            }
+        }
+        catch(Exception ex)
+        {
+            Results.Content(ex.Message);
         }
     }
     return Results.Json(tags);
+
 });
 
 app.Run();
