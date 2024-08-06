@@ -12,10 +12,5 @@ namespace tagBackendAPI.EFcontext
         {
             optionsBuilder.UseMySql(_databaseSettings, ServerVersion.AutoDetect(_databaseSettings));
         }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<TagsHtml>().HasNoKey();
-        }
     }
 }
