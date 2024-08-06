@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{01E69880-2257-4444-9F83-59D6CE5DF2C6}|tagBackendAPI\\tagBackendAPI.csproj|solutionrelative:tagbackendapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E69880-2257-4444-9F83-59D6CE5DF2C6}|tagBackendAPI\\tagBackendAPI.csproj|c:\\users\\\u0441\u0435\u0440\u0433\u0435\u0439\\documents\\site\\price-tag-creator\\tagbackendapi\\tagbackendapi\\efcontext\\aplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01E69880-2257-4444-9F83-59D6CE5DF2C6}|tagBackendAPI\\tagBackendAPI.csproj|solutionrelative:tagbackendapi\\efcontext\\aplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{01E69880-2257-4444-9F83-59D6CE5DF2C6}|tagBackendAPI\\tagBackendAPI.csproj|c:\\users\\\u0441\u0435\u0440\u0433\u0435\u0439\\documents\\site\\price-tag-creator\\tagbackendapi\\tagbackendapi\\tags\\pricetag.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01E69880-2257-4444-9F83-59D6CE5DF2C6}|tagBackendAPI\\tagBackendAPI.csproj|solutionrelative:tagbackendapi\\tags\\pricetag.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01E69880-2257-4444-9F83-59D6CE5DF2C6}|tagBackendAPI\\tagBackendAPI.csproj|c:\\users\\\u0441\u0435\u0440\u0433\u0435\u0439\\documents\\site\\price-tag-creator\\tagbackendapi\\tagbackendapi\\models\\tagshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01E69880-2257-4444-9F83-59D6CE5DF2C6}|tagBackendAPI\\tagBackendAPI.csproj|solutionrelative:tagbackendapi\\models\\tagshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01E69880-2257-4444-9F83-59D6CE5DF2C6}|tagBackendAPI\\tagBackendAPI.csproj|c:\\users\\\u0441\u0435\u0440\u0433\u0435\u0439\\documents\\site\\price-tag-creator\\tagbackendapi\\tagbackendapi\\tags\\pricetag.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{01E69880-2257-4444-9F83-59D6CE5DF2C6}|tagBackendAPI\\tagBackendAPI.csproj|solutionrelative:tagbackendapi\\tags\\pricetag.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{01E69880-2257-4444-9F83-59D6CE5DF2C6}|tagBackendAPI\\tagBackendAPI.csproj|c:\\users\\\u0441\u0435\u0440\u0433\u0435\u0439\\documents\\site\\price-tag-creator\\tagbackendapi\\tagbackendapi\\efcontext\\aplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01E69880-2257-4444-9F83-59D6CE5DF2C6}|tagBackendAPI\\tagBackendAPI.csproj|solutionrelative:tagbackendapi\\efcontext\\aplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,27 +36,27 @@
               "RelativeDocumentMoniker": "tagBackendAPI\\Models\\TagsHtml.cs",
               "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\Documents\\Site\\price-tag-creator\\tagBackendAPI\\tagBackendAPI\\Models\\TagsHtml.cs",
               "RelativeToolTip": "tagBackendAPI\\Models\\TagsHtml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAA8AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-04T15:20:01.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AplicationContext.cs",
               "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\Documents\\Site\\price-tag-creator\\tagBackendAPI\\tagBackendAPI\\EFcontext\\AplicationContext.cs",
               "RelativeDocumentMoniker": "tagBackendAPI\\EFcontext\\AplicationContext.cs",
               "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\Documents\\Site\\price-tag-creator\\tagBackendAPI\\tagBackendAPI\\EFcontext\\AplicationContext.cs",
               "RelativeToolTip": "tagBackendAPI\\EFcontext\\AplicationContext.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAA3AAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-04T09:00:18.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "pricetag.html",
               "DocumentMoniker": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\Documents\\Site\\price-tag-creator\\tagBackendAPI\\tagBackendAPI\\tags\\pricetag.html",
               "RelativeDocumentMoniker": "tagBackendAPI\\tags\\pricetag.html",
@@ -75,7 +75,7 @@
               "RelativeDocumentMoniker": "tagBackendAPI\\Program.cs",
               "ToolTip": "C:\\Users\\\u0421\u0435\u0440\u0433\u0435\u0439\\Documents\\Site\\price-tag-creator\\tagBackendAPI\\tagBackendAPI\\Program.cs",
               "RelativeToolTip": "tagBackendAPI\\Program.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABwAAAA8AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-02T06:01:03.946Z",
               "EditorCaption": ""

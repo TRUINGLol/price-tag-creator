@@ -9,25 +9,35 @@ var app = builder.Build();
 
 app.UseCors(b=>b.AllowAnyOrigin());
 
-app.Run(async (context) =>
+//Get all tags from db
+app.MapGet("api/tags", () =>
 {
-    string[] HTMLtagFromBD = new string[10];
-
-    //GET
-    if(context.Request.Path == "/api/tag")
+    List<TagsHtml> tags = new List<TagsHtml>();
+    using(AplicationContext db = new AplicationContext())
     {
-        using(AplicationContext db = new AplicationContext())
+        var tagsDB = db.tagsHtml.ToList();
+        foreach (TagsHtml item in tagsDB)
         {
-            var tags = db.tagsHtml.ToList();
-
-            foreach(TagsHtml tag in tags)
-            {
-                HTMLtagFromBD[0] = tag.Tag;
-            }
+            tags.Add(item);
         }
-
-        await context.Response.WriteAsync(HTMLtagFromBD[0]);
     }
+    return Results.Json(tags);
+});
+
+//Get tag by
+app.MapGet("api/tag/{count}", (string count) =>
+{
+    List<TagsHtml> tags = new List<TagsHtml>();
+    using(AplicationContext db = new AplicationContext())
+    {
+        var tagsDB = db.tagsHtml.Where(d=>d.id<=Int32.Parse(count)).ToList();
+
+        foreach (TagsHtml item in tagsDB)
+        {
+            tags.Add(item);
+        }
+    }
+    return Results.Json(tags);
 });
 
 app.Run();
