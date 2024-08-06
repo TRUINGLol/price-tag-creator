@@ -3,31 +3,17 @@ import cl from "./styles/Select1.module.css";
 import Header from "../components/header/Header.jsx";
 import TagTemplate from "../components/tagTemplate/TagTemplate.jsx";
 import Button from "../components/button/Button.jsx";
-import axios from "axios";
 import Loader from "../components/loader/Loader.jsx";
+import Fetch from "../API/Fetch.js";
 
 export default function Select1(){
-
-    async function fetchTags(setData,setIsLoading){
-        try{
-            setIsLoading(true);
-            const responce = await axios.get("https://localhost:7056/api/tag?count=3");
-            setData(responce.data);        
-            setIsLoading(false);
-        }
-        catch(e){
-            setIsLoading(true);
-            console.error("Fetch error:", e.message)
-        }
-
-    }
 
     const [isLoading, setIsLoading] = useState(false);
     
     const [data,setData] = useState([]);
 
     useEffect(()=>{
-        fetchTags(setData,setIsLoading);
+        Fetch.fetchTagsByCount(setData,setIsLoading,3);
     },[])
 
     return (
@@ -39,7 +25,8 @@ export default function Select1(){
             </div>
 
             <div className={cl.tags}>
-                {isLoading ? <div style={{display:"flex", justifyContent:'center'}}><Loader/></div>: data.map((tag)=><TagTemplate key={tag.id} tag={tag.tag}/>)}
+                {isLoading ? <div style={{display:"flex", justifyContent:'center'}}><Loader/></div> :
+                 data.map((tag)=><TagTemplate key={tag.id} tag={tag.tag}/>)}
             </div>
 
             <div className={cl.button}>
