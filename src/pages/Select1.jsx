@@ -9,10 +9,17 @@ import Loader from "../components/loader/Loader.jsx";
 export default function Select1(){
 
     async function fetchTags(setData,setIsLoading){
-        setIsLoading(true);
-        const responce = await axios.get("https://localhost:7056/api/tag?count=3");
-        setData(responce.data);
-        setIsLoading(false);
+        try{
+            setIsLoading(true);
+            const responce = await axios.get("https://localhost:7056/api/tag?count=3");
+            setData(responce.data);        
+            setIsLoading(false);
+        }
+        catch(e){
+            setIsLoading(true);
+            console.error("Fetch error:", e.message)
+        }
+
     }
 
     const [isLoading, setIsLoading] = useState(false);
