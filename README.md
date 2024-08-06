@@ -13,5 +13,9 @@
 
 [ASP.NET](https://github.com/dotnet/aspnetcore) - для работы с серверной частью сайта
 
+[MySql](https://github.com/mysql/mysql-server) - СУБД для хранения данных
+
+[Entity Framework](https://github.com/dotnet/efcore) - для работы с БД
+
 [Axios](https://github.com/axios/axios) - для работы с HTTP запросами
 
