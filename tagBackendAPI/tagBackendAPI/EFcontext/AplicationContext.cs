@@ -7,7 +7,7 @@ namespace tagBackendAPI.EFcontext
     {
         public DbSet<TagsHtml> tagsHtml => Set<TagsHtml>();
         
-        private string _databaseSettings = "server=localhost;user=root;password=Naib.123;database=tags;";
+        private string _databaseSettings = "server=localhost;user=root;password=123456;database=tags;";
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySql(_databaseSettings, ServerVersion.AutoDetect(_databaseSettings));

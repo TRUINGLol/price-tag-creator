@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tagBackendAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c59c1a83b2ce97bb92ef029b59db3fdde028ab9e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7dee36a0be7538f9f936b9ed9d2f45a062d0be7")]
 [assembly: System.Reflection.AssemblyProductAttribute("tagBackendAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tagBackendAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
