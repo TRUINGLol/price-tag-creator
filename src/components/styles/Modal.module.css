@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.6);
+}
+.modal.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalMain{
+    padding: 25px;
+    background-color: rgb(237, 131, 71);
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    min-width: 250px;
+    border-radius: 16px;
+}
