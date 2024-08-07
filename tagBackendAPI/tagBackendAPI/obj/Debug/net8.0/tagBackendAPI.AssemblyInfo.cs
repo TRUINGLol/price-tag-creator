@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tagBackendAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f65eb469208bdd4da67aa348eb4b26afae9025d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+068b2cbe582404739916d608676ac74c24d04798")]
 [assembly: System.Reflection.AssemblyProductAttribute("tagBackendAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tagBackendAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
