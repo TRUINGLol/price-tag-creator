@@ -1,12 +1,14 @@
 import React from "react";
 import cl from "../styles/TagTemplate.module.css";
 import { useNavigate } from "react-router-dom";
+import Post from "../../API/Post";
 
 export default function TagTemplate({width='380px', height='228px', tag}){
     const nav = useNavigate();
 
     function RouteNext(){
-        nav('/select2');
+        Post.postData(tag);
+        nav("/select2");
     }
     
     return (
