@@ -1,12 +1,11 @@
 import axios from "axios";
 
-export default class Post{
-    static async postData(data){
-        try{
-            await axios.post("https://localhost:7056/api/postdata",data);
-        }
-        catch(e){
-            console.error("post error:"+e.message);
-        }
-    }
+export default async function usePost(data,setVisible,setSuccess){
+    await axios.post("https://localhost:7056/api/setselectedtag",data)
+    .then(()=>setSuccess(true))
+    .catch((e)=>{
+        setVisible(true);
+        console.log(e.message);
+        setSuccess(false);
+    });
 }
