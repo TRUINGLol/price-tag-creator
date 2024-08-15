@@ -12,8 +12,8 @@ export default function Select2(){
         <div>
             <Header/>
 
-            <div className={cl.mainBlock}>
-
+            <div className={cl.text}>
+                <p>Задайте общие настройки</p>
             </div>
         </div>
     );
