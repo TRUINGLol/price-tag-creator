@@ -39,7 +39,9 @@ export default function Select2(){
         <div>
             <Header/>
 
-            <Modal isVisible={isVisible} setVisible={setVisible}>Ooops...Something went wrong... try again later</Modal>
+            <Modal isVisible={isVisible} setVisible={setVisible}>
+                Ooops...Something went wrong... try again later
+            </Modal>
 
             <div className={cl.text}>
                 <p>Задайте общие настройки</p>
@@ -51,7 +53,11 @@ export default function Select2(){
                     <input placeholder="Дата" type="text" name="date" className={cl.inputField} onChange={handleChange}/>
                     <input placeholder="Название вашей организации" type="text" name="orga" className={cl.inputField} onChange={handleChange}/>
                     <input placeholder="Страна производства" type="text" name="country" className={cl.inputField} onChange={handleChange}/>
-                    <input placeholder="Валюта" type="text" name="currency" className={cl.inputField} onChange={handleChange}/>
+                    <select name="currency" className={cl.inputField} style={{width:"603px", height:"38px"}} onChange={handleChange}>
+                        <option value="₽">Рубль</option>
+                        <option value="$">Доллар</option>
+                        <option value="€">Евро</option>
+                    </select>
                     <FormButton>Подтвердить</FormButton>
                 </form>
             </div>
