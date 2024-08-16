@@ -15,15 +15,15 @@ export default class Fetch{
     }
 
     static async fetchAllTags(setData,setIsLoading){
-        try{
-            setIsLoading(true);
-            const responce = await axios.get("https://localhost:7056/api/tags");
-            setData(responce.data);
+        setIsLoading(true);
+        await axios.get("https://localhost:7056/api/tags")
+        .then((responce)=>{
             setIsLoading(false);
-        }
-        catch(e){
+            setData(responce.data);
+        })
+        .catch((e)=>{
             setIsLoading(true);
-            console.error("Fetch error:", e.message);
-        }
+            console.log("Fetch error:"+e.message);
+        });
     }
 }
