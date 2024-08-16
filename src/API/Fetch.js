@@ -2,28 +2,28 @@ import axios from "axios";
 
 export default class Fetch{
     static async fetchTagsByCount(setData,setIsLoading,count){
-        try{
-            setIsLoading(true);
-            const responce = await axios.get(`https://localhost:7056/api/tag?count=${count}`);
-            setData(responce.data);        
+        setIsLoading(true);
+        await axios.get(`https://localhost:7056/api/tag?count=${count}`)
+        .then((responce)=>{
             setIsLoading(false);
-        }
-        catch(e){
+            setData(responce.data)
+        })
+        .catch((e)=>{
+            console.log(e.message);
             setIsLoading(true);
-            console.error("Fetch error:", e.message)
-        }
+        });
     }
 
     static async fetchAllTags(setData,setIsLoading){
-        try{
-            setIsLoading(true);
-            const responce = await axios.get("https://localhost:7056/api/tags");
-            setData(responce.data);
+        setIsLoading(true);
+        await axios.get("https://localhost:7056/api/tags")
+        .then((responce)=>{
             setIsLoading(false);
-        }
-        catch(e){
+            setData(responce.data);
+        })
+        .catch((e)=>{
             setIsLoading(true);
-            console.error("Fetch error:", e.message);
-        }
+            console.log("Fetch error:"+e.message);
+        });
     }
 }
