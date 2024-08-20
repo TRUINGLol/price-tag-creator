@@ -1,7 +1,7 @@
 import React from "react";
 import cl from "../styles/inputFields.module.css";
 
-export default function InputFields({index,setFormData}){
+export default function InputFields({index,setFormData,formData,isDelete}){
     
     function handleChange(e) {
         const {name, value} = e.target;
@@ -9,6 +9,19 @@ export default function InputFields({index,setFormData}){
             ...prevData,
             [name]:value
         }));
+    }
+
+    function deleteData(){
+        if(isDelete){
+            let props = [{"true":"yes"}];
+            if(Object.keys({}).length === 0){
+                props = Object.getOwnPropertyNames(formData).filter((prop)=>prop.includes(index));;
+            }
+            else{
+                return;
+            }
+            console.log(props);
+        }
     }
 
     return(
@@ -20,6 +33,9 @@ export default function InputFields({index,setFormData}){
             <input type="text" className={cl.oldPrice} placeholder="199" name={`oldPrice${index}`} onChange={handleChange}/>
             <input type="text" className={cl.originCountry} placeholder="Россия" name={`originCountry${index}`} onChange={handleChange}/>
             <input type="text" className={cl.amount} placeholder="1" name={`amount${index}`} onChange={handleChange}/>           
+            {
+                deleteData()
+            }
         </div>
     );
 }

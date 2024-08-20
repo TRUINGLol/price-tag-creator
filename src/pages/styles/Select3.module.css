@@ -30,3 +30,24 @@ span{
     padding-left: 5px;
     padding-right: 5px;
 }
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+button{
+    width: 132px;
+    height: 22px;
+    background-color: #ED8347;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    border: 2px solid #B7FF8A;
+    color: #8DBA71;
+}
+.FormButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+}
