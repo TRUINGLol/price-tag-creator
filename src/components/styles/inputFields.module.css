@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.inputs{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    gap: 5px;
+}
+.inputs>input{
+    height: 30px;
+    font-family: "Roboto",sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    border: 1.5px solid #A5A5A5;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.inputs>input::placeholder{
+    color: #A5A5A5;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin-left: 5px;
+}
+.productName{
+    width: 379px;
+}
+.unit{
+    width: 59px;
+}
+.productCode{
+    width: 87px;
+}
+.price{
+    width: 138px;
+}
+.oldPrice{
+    width: 138px;
+}
+.originCountry{
+    width: 183px;
+}
+.amount{
+    width: 52px;
+}
