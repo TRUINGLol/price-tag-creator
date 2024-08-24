@@ -9,7 +9,7 @@ export default function Select3(){
     
     const [formData,setFormData] = useState("");
     const [inputs, setInputs] = useState([
-    <InputFields formData={formData} isDelete={false} key={uuidv4()} index={uuidv4()} setFormData={setFormData}/>]);
+    <InputFields key={uuidv4()} index={uuidv4()} setFormData={setFormData}/>]);
 
     useEffect(()=>{
         document.body.style.backgroundColor = "#ED8347";
@@ -22,13 +22,46 @@ export default function Select3(){
 
     function addInputField(e){
         e.preventDefault();
-        setInputs([...inputs, <InputFields formData={formData} isDelete={true} key={uuidv4()} index={uuidv4()} setFormData={setFormData}/>])
+        setInputs([...inputs, <InputFields key={uuidv4()} index={uuidv4()} setFormData={setFormData}/>])
     }
 
     function removeInputField(e){
         e.preventDefault();
+
+        let LastUuid = null;
+
+        const changedInputsLastProps = [inputs.map((obj,index)=>{
+            if(index === inputs.length - 1){
+                //get last element uuid
+                LastUuid = obj.props.index;
+                return {
+                    ...obj,
+                    props:{
+                        ...obj.props,
+                        isDelete:true
+                    },
+                };
+            }
+            else{
+                return obj;
+            }
+        })]
+        setInputs(changedInputsLastProps);
+
+        deleteData(LastUuid);
+
         if(inputs.length>1){
             setInputs(inputs.slice(0,-1));
+        }
+    }
+
+    function deleteData(LastUuid){
+        let propsName = {};
+        let newProps = {};
+        if(Object.keys(formData).length !== 0){
+            propsName = Object.getOwnPropertyNames(formData).filter((prop)=>prop.includes(LastUuid));
+            newProps = Object.fromEntries(Object.entries(formData).filter(([key])=>!propsName.includes(key)));
+            setFormData(newProps);
         }
     }
 
