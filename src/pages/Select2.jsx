@@ -1,7 +1,7 @@
 import React, { useEffect,useState } from "react";
 import cl from "./styles/Select2.module.css";
 import Header from "../components/header/Header";
-import { postForm } from "../API/Post";
+import { postGeneralData } from "../API/Post";
 import FormButton from "../components/formButton/FormButton";
 import Modal from "../components/modal/Modal";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +20,7 @@ export default function Select2(){
 
     function handleSubmit(e){
         e.preventDefault();
-        postForm(formData, setVisible, setSuccess);
+        postGeneralData(formData, setVisible, setSuccess);
         if(isSuccess){
             nav("/select3");
         }

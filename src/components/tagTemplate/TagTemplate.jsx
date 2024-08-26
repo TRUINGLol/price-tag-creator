@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import cl from "../styles/TagTemplate.module.css";
 import { useNavigate } from "react-router-dom";
-import usePost from "../../API/Post";
+import { postSelectedTag } from "../../API/Post";
 
 export default function TagTemplate({width='380px', height='228px', tag, setModalVisible}){
     const nav = useNavigate();
@@ -9,7 +9,7 @@ export default function TagTemplate({width='380px', height='228px', tag, setModa
     const [isSuccess, setSuccess] = useState(false);
 
     function PostData(){
-        usePost(tag,setModalVisible,setSuccess);
+        postSelectedTag(tag,setModalVisible,setSuccess);
     }
     
     useEffect(()=>{

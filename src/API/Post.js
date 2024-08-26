@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default async function usePost(data,setVisible,setSuccess){
+export async function postSelectedTag(data,setVisible,setSuccess){
     await axios.post("https://localhost:7056/api/setselectedtag",data)
     .then(()=>setSuccess(true))
     .catch((e)=>{
@@ -9,8 +9,20 @@ export default async function usePost(data,setVisible,setSuccess){
         setSuccess(false);
     });
 }
-export async function postForm(data,setVisible,setSuccess) {
-    await axios.post("https://localhost:7056/api/postformdata",data)
+export async function postGeneralData(data,setVisible,setSuccess) {
+    await axios.post("https://localhost:7056/api/postgeneraldata",JSON.stringify(data))
+    .then(()=>{
+        setSuccess(true);
+    })
+    .catch((e)=>{
+        console.log("Post error"+e.message);
+        setVisible(true);
+        setSuccess(false);
+    })
+}
+
+export async function postProductsData(data,setVisible,setSuccess) {
+    await axios.post("https://localhost:7056/api/postproductdata",JSON.stringify(data))
     .then(()=>{
         setSuccess(true);
     })
