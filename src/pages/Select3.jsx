@@ -3,13 +3,20 @@ import cl from "./styles/Select3.module.css";
 import Header from "../components/header/Header";
 import InputFields from "../components/inputFields/inputFields";
 import FormButton from "../components/formButton/FormButton";
+import { postProductsData } from "../API/Post";
 import {v4 as uuidv4} from "uuid";
+import Modal from "../components/modal/Modal";
+import { useNavigate } from "react-router-dom";
 
 export default function Select3(){
+    const nav = useNavigate();
     
     const [formData,setFormData] = useState("");
     const [inputs, setInputs] = useState([
     <InputFields key={uuidv4()} index={uuidv4()} setFormData={setFormData}/>]);
+    
+    const [isVisible,setVisible] = useState(false);
+    const [isSuccess,setSuccess] = useState(false);
 
     useEffect(()=>{
         document.body.style.backgroundColor = "#ED8347";
@@ -18,6 +25,15 @@ export default function Select3(){
     function handleSubmit(e){
         e.preventDefault();
         console.log(formData);
+        if(Object.keys(formData).length === 0){
+            setVisible(true);
+        }
+        else{
+            postProductsData(formData,setVisible,setSuccess);
+            if(isSuccess){
+                nav("/file");
+            }
+        }
     }
 
     function addInputField(e){
@@ -66,6 +82,10 @@ export default function Select3(){
     return (
         <div>
             <Header/>
+
+            <Modal isVisible={isVisible}  setVisible={setVisible}>
+                Ooops...Something went wrong... try again later or change form field
+            </Modal>
 
             <div className={cl.text}>
                 <p><span>Добавьте</span> товары в список товаров</p>
