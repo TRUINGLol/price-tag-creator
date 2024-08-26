@@ -56,11 +56,9 @@ export default function Select3(){
     }
 
     function deleteData(LastUuid){
-        let propsName = {};
-        let newProps = {};
         if(Object.keys(formData).length !== 0){
-            propsName = Object.getOwnPropertyNames(formData).filter((prop)=>prop.includes(LastUuid));
-            newProps = Object.fromEntries(Object.entries(formData).filter(([key])=>!propsName.includes(key)));
+            let propsName = Object.getOwnPropertyNames(formData).filter((prop)=>prop.includes(LastUuid));
+            let newProps = Object.fromEntries(Object.entries(formData).filter(([key])=>!propsName.includes(key)));
             setFormData(newProps);
         }
     }
